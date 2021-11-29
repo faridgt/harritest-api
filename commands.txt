@@ -1,0 +1,13 @@
+  847  git init 
+  848  git add .
+  849  git commit -m "1st cmnt"
+
+  851  heroku git:remote -a harri-test-api
+  852  git remote -v
+
+
+
+  880  git push heroku master
+
+in a separate window:
+heroku logs --tail -a  harri-test-api
