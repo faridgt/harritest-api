@@ -16,7 +16,7 @@ public class TestIfWorking {
 	
 	}
 	
-	@GetMapping(path = "/countries/{cnt}")
+	@GetMapping(path = "/countries-test/{cnt}")
 	public CountriesTest listByCountry(@PathVariable String cnt) {
 		
 		return new CountriesTest(cnt); 
