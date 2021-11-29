@@ -2,10 +2,12 @@ package dev.harritest.api.apicountries.countries;
 
 import java.util.List;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
 
+@Entity
 public class Continent {
 
 		@Id

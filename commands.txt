@@ -11,3 +11,6 @@
 
 in a separate window:
 heroku logs --tail -a  harri-test-api
+
+
+http post "https://harri-test-api.herokuapp.com/country" code="MA" name="testMA" fullName='test country' iso3="tfs" number="009" continentCode="what ever"
