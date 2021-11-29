@@ -14,3 +14,6 @@ heroku logs --tail -a  harri-test-api
 
 
 http post "https://harri-test-api.herokuapp.com/country" code="MA" name="testMA" fullName='test country' iso3="tfs" number="009" continentCode="what ever"
+
+
+ nested exception is org.hibernate.DuplicateMappingException: Table [country] contains physical column name [continent_code] referred to by multiple logical column names: [continent_code], [continentCode
