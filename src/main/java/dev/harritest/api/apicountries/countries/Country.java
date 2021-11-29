@@ -1,5 +1,6 @@
 package dev.harritest.api.apicountries.countries;
 
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -9,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
-
+@Entity
 public class Country {
 /*
  CREATE TABLE IF NOT EXISTS `countries` (
