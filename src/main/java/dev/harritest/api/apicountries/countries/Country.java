@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
-@Entity
+//@Entity
 public class Country {
 
 	@Id

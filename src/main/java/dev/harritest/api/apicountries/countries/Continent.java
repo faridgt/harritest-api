@@ -14,8 +14,8 @@ public class Continent {
 		@Size(min=2, message="Code should have atleast 2 characters")
 		private String code;
 		private String name;
-		@OneToMany(mappedBy="Continent")
-		private List<Country> countries;
+		//@OneToMany(mappedBy="Continent")
+		//private List<Country> countries;
 
 		public Continent() {
 			
@@ -43,14 +43,14 @@ public class Continent {
 			this.name = name;
 		}
 
-		public List<Country> getCountries() {
+/*		public List<Country> getCountries() {
 			return countries;
 		}
 
 		public void setCountries(List<Country> countries) {
 			this.countries = countries;
 		}
-		
+*/		
 		
 		
 }
