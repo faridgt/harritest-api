@@ -32,7 +32,7 @@ public class CountryDaoService {
 
 			public Country findOne(String code) {
 				for (Country country : countries) {
-					if (country.getCode() == code) {
+					if (country.getCode().equals(code)) {
 						return country;
 					}
 				}
