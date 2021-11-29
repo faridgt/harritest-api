@@ -20,10 +20,11 @@ public class CountryResource {
 
 	@GetMapping("/countries/{code}")
 	public Country retrieveUser(@PathVariable String code) {
+		
 		Country country = service.findOne(code);
 		
 		if(country==null)
-			throw new RuntimeException("code-"+ code);
+			throw new UserNotFoundException("code-"+ code);
 		
 		
 		return country;
