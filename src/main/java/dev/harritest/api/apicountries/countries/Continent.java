@@ -4,6 +4,7 @@ package dev.harritest.api.apicountries.countries;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
@@ -11,6 +12,10 @@ import javax.validation.constraints.Size;
 public class Continent {
 
 		@Id
+		@GeneratedValue
+		private int id;
+		
+
 		@Size(min=2, message="Code should have atleast 2 characters")
 		private String code;
 		private String name;
@@ -52,5 +57,12 @@ public class Continent {
 		}
 */		
 		
+		public int getId() {
+			return id;
+		}
+
+		public void setId(int id) {
+			this.id = id;
+		}
 		
 }

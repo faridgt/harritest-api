@@ -2,6 +2,7 @@ package dev.harritest.api.apicountries.countries;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
@@ -13,7 +14,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 //@Entity
 public class Country {
 
+	
 	@Id
+	@GeneratedValue
+	private int id;
+	
 	@Size(min=2, message="Name should have atleast 2 characters")
 	private String code;
 
@@ -113,6 +118,13 @@ public void setContinent(Continent continent) {
 	this.continent = continent;
 }
 
+public int getId() {
+	return id;
+}
+
+public void setId(int id) {
+	this.id = id;
+}
 
 
 }

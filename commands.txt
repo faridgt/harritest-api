@@ -15,5 +15,52 @@ heroku logs --tail -a  harri-test-api
 
 http post "https://harri-test-api.herokuapp.com/country" code="MA" name="testMA" fullName='test country' iso3="tfs" number="009" continentCode="what ever"
 
+------------------------------------------
+=================================
+2021-11-29T20:39:58.000000+00:00 app[api]: Build started by user fmohammad@gmail.com
+2021-11-29T20:40:16.396878+00:00 heroku[web.1]: Restarting
+2021-11-29T20:40:16.608900+00:00 heroku[web.1]: State changed from up to starting
+2021-11-29T20:40:17.402731+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2021-11-29T20:40:17.617882+00:00 heroku[web.1]: Process exited with status 143
+2021-11-29T20:40:17.460038+00:00 app[web.1]: 2021-11-29 20:40:17.459  INFO 4 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-29T20:40:17.461809+00:00 app[web.1]: 2021-11-29 20:40:17.461  INFO 4 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-29T20:40:17.478771+00:00 app[web.1]: 2021-11-29 20:40:17.478  INFO 4 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-29T20:40:16.127613+00:00 app[api]: Release v22 created by user fmohammad@gmail.com
+2021-11-29T20:40:19.799739+00:00 heroku[web.1]: Starting process with command `java -Dserver.port=49562 $JAVA_OPTS -jar target/api-countries-0.0.1-SNAPSHOT.jar`
+2021-11-29T20:40:16.127613+00:00 app[api]: Deploy d961dd1b by user fmohammad@gmail.com
+2021-11-29T20:40:20.717966+00:00 app[web.1]: Create a Procfile to customize the command used to run this process: https://devcenter.heroku.com/articles/procfile
+2021-11-29T20:40:20.740832+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2021-11-29T20:40:20.746342+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8
+2021-11-29T20:40:22.945197+00:00 app[web.1]: 
+2021-11-29T20:40:22.945216+00:00 app[web.1]: .   ____          _            __ _ _
+2021-11-29T20:40:22.945298+00:00 app[web.1]: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2021-11-29T20:40:22.945328+00:00 app[web.1]: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2021-11-29T20:40:22.945357+00:00 app[web.1]: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2021-11-29T20:40:22.945386+00:00 app[web.1]: '  |____| .__|_| |_|_| |_\__, | / / / /
+2021-11-29T20:40:22.945415+00:00 app[web.1]: =========|_|==============|___/=/_/_/_/
+2021-11-29T20:40:22.946644+00:00 app[web.1]: :: Spring Boot ::                (v2.5.7)
+2021-11-29T20:40:22.946697+00:00 app[web.1]: 
+2021-11-29T20:40:23.083352+00:00 app[web.1]: 2021-11-29 20:40:23.081  INFO 4 --- [           main] d.h.a.a.ApiCountriesApplication          : Starting ApiCountriesApplication v0.0.1-SNAPSHOT using Java 1.8.0_312-heroku on 500ad420-6acd-4ada-80a4-6115f8fef198 with PID 4 (/app/target/api-countries-0.0.1-SNAPSHOT.jar started by u45943 in /app)
+2021-11-29T20:40:23.083738+00:00 app[web.1]: 2021-11-29 20:40:23.083  INFO 4 --- [           main] d.h.a.a.ApiCountriesApplication          : No active profile set, falling back to default profiles: default
+2021-11-29T20:40:26.172257+00:00 app[web.1]: 2021-11-29 20:40:26.172  INFO 4 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-29T20:40:26.189333+00:00 app[web.1]: 2021-11-29 20:40:26.189  INFO 4 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2021-11-29T20:40:23.000000+00:00 app[api]: Build succeeded
+2021-11-29T20:40:27.969666+00:00 app[web.1]: 2021-11-29 20:40:27.969  INFO 4 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 49562 (http)
+2021-11-29T20:40:27.981722+00:00 app[web.1]: 2021-11-29 20:40:27.981  INFO 4 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-29T20:40:27.981887+00:00 app[web.1]: 2021-11-29 20:40:27.981  INFO 4 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-29T20:40:28.031768+00:00 app[web.1]: 2021-11-29 20:40:28.031  INFO 4 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-29T20:40:28.031900+00:00 app[web.1]: 2021-11-29 20:40:28.031  INFO 4 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4892 ms
+2021-11-29T20:40:28.103702+00:00 app[web.1]: 2021-11-29 20:40:28.102  INFO 4 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-29T20:40:29.117272+00:00 app[web.1]: 2021-11-29 20:40:29.117  INFO 4 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-29T20:40:29.214221+00:00 app[web.1]: 2021-11-29 20:40:29.213  INFO 4 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-29T20:40:29.288990+00:00 app[web.1]: 2021-11-29 20:40:29.288  INFO 4 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-29T20:40:29.986411+00:00 app[web.1]: 2021-11-29 20:40:29.986  INFO 4 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-29T20:40:30.146474+00:00 app[web.1]: 2021-11-29 20:40:30.146  INFO 4 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-11-29T20:40:31.371733+00:00 app[web.1]: 2021-11-29 20:40:31.371  INFO 4 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-29T20:40:31.381295+00:00 app[web.1]: 2021-11-29 20:40:31.381  INFO 4 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-29T20:40:31.848944+00:00 app[web.1]: 2021-11-29 20:40:31.848  WARN 4 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-29T20:40:32.245693+00:00 app[web.1]: 2021-11-29 20:40:32.245  INFO 4 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49562 (http) with context path ''
+2021-11-29T20:40:32.257628+00:00 app[web.1]: 2021-11-29 20:40:32.257  INFO 4 --- [           main] d.h.a.a.ApiCountriesApplication          : Started ApiCountriesApplication in 10.948 seconds (JVM running for 11.511)
+2021-11-29T20:40:32.597081+00:00 heroku[web.1]: State changed from starting to up
 
 
