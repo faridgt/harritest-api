@@ -1,5 +1,6 @@
 package dev.harritest.api.apicountries.countries;
 
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
-//@Entity
+@Entity
 public class Country {
 
 	

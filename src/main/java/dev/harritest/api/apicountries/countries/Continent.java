@@ -3,10 +3,13 @@ package dev.harritest.api.apicountries.countries;
 
 
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -20,8 +23,9 @@ public class Continent {
 		@Size(min=2, message="Code should have atleast 2 characters")
 		private String code;
 		private String name;
-		//@OneToMany(mappedBy="Continent")
-		//private List<Country> countries;
+		
+		@OneToMany(mappedBy="Continent")
+		private List<Country> countries;
 
 		public Continent() {
 			

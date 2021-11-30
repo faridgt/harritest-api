@@ -20,12 +20,12 @@ public class CountryResource {
 	@Autowired
 	private CountryDaoService service;
 
-	@GetMapping("/countries")
+	@GetMapping("/countries-test")
 	public List<Country> retrieveAllUsers() {
 		return service.findAll();
 	}
 
-	@GetMapping("/countries/{code}")
+	@GetMapping("/countries-test/{code}")
 	public Country retrieveUser(@PathVariable String code) {
 		
 		Country country = service.findOne(code);
@@ -37,7 +37,7 @@ public class CountryResource {
 		return country;
 	}
 	
-	@PostMapping("/country")
+	@PostMapping("/country-test")
 	public ResponseEntity<Object> createUser(@Valid @RequestBody Country country) {
 		Country savedCountry = service.save(country);
 		// CREATED
