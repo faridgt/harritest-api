@@ -27,7 +27,7 @@ public class Country {
 	private String fullName;
 	private String iso3;
 	private String number;
-	private  String continentCode;
+	//private  String continentCode;
 
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JsonIgnore
@@ -41,27 +41,17 @@ public Country() {
 	
 }
 
-public Country(@Size(min = 2, message = "Name should have atleast 2 characters") String code, String name, String fullName, String iso3, String number, String continentCode) {
-	super();
-	this.code = code;
-	this.name = name;
-	this.fullName = fullName;
-	this.iso3 = iso3;
-	this.number = number;
-	this.continentCode = continentCode;
-}
 
 public Country(@Size(min = 2, message = "Name should have atleast 2 characters") String code, String name,
-		String fullName, String iso3, String number, String continentCode, Continent continent) {
+		String fullName, String iso3, String number) {
 	super();
 	this.code = code;
 	this.name = name;
 	this.fullName = fullName;
 	this.iso3 = iso3;
 	this.number = number;
-	this.continentCode = continentCode;
-	this.continent = continent;
 }
+
 
 public String getCode() {
 	return code;
@@ -103,13 +93,6 @@ public void setNumber(String number) {
 	this.number = number;
 }
 
-public String getContinentCode() {
-	return continentCode;
-}
-
-public void setContinentCode(String continentCode) {
-	this.continentCode = continentCode;
-}
 
 public Continent getContinent() {
 	return continent;
