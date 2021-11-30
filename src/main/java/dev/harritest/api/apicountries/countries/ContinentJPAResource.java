@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ContinentJPAResource {
 
-	@Autowired
-	private CountryDaoService service;
+//	@Autowired
+//	private CountryDaoService service;
 
 	@Autowired
 	private ContinentRepository continentRepository;
