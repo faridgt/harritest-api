@@ -41,6 +41,29 @@ public Country() {
 }
 
 
+public Country(@Size(min = 2, message = "Name should have atleast 2 characters") String code, String name,
+		String fullName, String iso3, String number) {
+	super();
+	this.code = code;
+	this.name = name;
+	this.fullName = fullName;
+	this.iso3 = iso3;
+	this.number = number;
+
+}
+
+public Country(@Size(min = 2, message = "Name should have atleast 2 characters") String code, String name,
+		String fullName, String iso3, String number, Continent continent) {
+	super();
+	this.code = code;
+	this.name = name;
+	this.fullName = fullName;
+	this.iso3 = iso3;
+	this.number = number;
+	this.continent = continent;
+}
+
+
 
 
 public String getCode() {
