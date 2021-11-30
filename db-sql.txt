@@ -30,6 +30,10 @@ CREATE TABLE IF NOT EXISTS `countries` (
   CONSTRAINT `fk_countries_continents` FOREIGN KEY (`continent_code`) REFERENCES `continents` (`code`)
 ) ENGINE=InnoDB;
 
+
+
+
+
 INSERT INTO `countries` (`code`, `continent_code`, `name`, `iso3`, `number`, `full_name`) VALUES
   ('AF', 'AS', "Afghanistan", 'AFG', '004', "Islamic Republic of Afghanistan"),
   ('AX', 'EU', "Åland Islands", 'ALA', '248', "Åland Islands"),
@@ -280,3 +284,15 @@ INSERT INTO `countries` (`code`, `continent_code`, `name`, `iso3`, `number`, `fu
   ('YE', 'AS', "Yemen", 'YEM', '887', "Yemen"),
   ('ZM', 'AF', "Zambia", 'ZMB', '894', "Republic of Zambia"),
   ('ZW', 'AF', "Zimbabwe", 'ZWE', '716', "Republic of Zimbabwe");
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
