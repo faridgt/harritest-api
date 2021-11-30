@@ -15,10 +15,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Country {
 
 	
-	@Id
-	@GeneratedValue
-	private Integer id;
+//	@Id
+//	@GeneratedValue
+//	private Integer id;
 	
+	@Id
 	@Size(min=2, message="Name should have atleast 2 characters")
 	private String code;
 
@@ -118,13 +119,13 @@ public void setContinent(Continent continent) {
 	this.continent = continent;
 }
 
-public Integer getId() {
-	return id;
-}
-
-public void setId(Integer id) {
-	this.id = id;
-}
+//public Integer getId() {
+//	return id;
+//}
+//
+//public void setId(Integer id) {
+//	this.id = id;
+//}
 
 
 }

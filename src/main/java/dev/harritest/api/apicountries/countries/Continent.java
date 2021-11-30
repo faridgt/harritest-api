@@ -16,11 +16,11 @@ import javax.validation.constraints.Size;
 @Entity
 public class Continent {
 
-		@Id
-		@GeneratedValue (strategy = GenerationType.IDENTITY)
-		private Integer id;
+		//@Id
+		//@GeneratedValue (strategy = GenerationType.IDENTITY)
+		//private Integer id;
 		
-
+		@Id
 		@Size(min=2, message="Code should have atleast 2 characters")
 		private String code;
 		private String name;
@@ -55,14 +55,14 @@ public class Continent {
 			this.name = name;
 		}
 
-		public Integer getId() {
-			return id;
-		}
-
-		public void setId(Integer id) {
-			this.id = id;
-		}
-
+//		public Integer getId() {
+//			return id;
+//		}
+//
+//		public void setId(Integer id) {
+//			this.id = id;
+//		}
+//
 		public List<Country> getCountries() {
 			return countries;
 		}

@@ -6,6 +6,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,12 +31,17 @@ public class ContinentJPAResource {
 	}
 
 	
-	@GetMapping("/continents/{id}")
-	public EntityModel<Continent> retrieveContinent(@PathVariable int id) {
-		Optional<Continent> continent = continentRepository.findById(id);
+	@GetMapping("/continents/{code}")
+	public EntityModel<Continent> retrieveContinent(@PathVariable String code) {
+	    
+		Continent c=new Continent();
+		c.setCode(code);
+		Example<Continent> example = Example.of(c);
+	    
+		Optional<Continent> continent = continentRepository.findOne(example);
 
 		if (!continent.isPresent())
-			throw new UserNotFoundException("id-" + id);
+			throw new UserNotFoundException("code-" + code);
 
 		EntityModel<Continent> resource = EntityModel.of(continent.get());//new EntityModel<User>(user.get());
 
