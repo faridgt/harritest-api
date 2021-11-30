@@ -24,7 +24,8 @@ public class Continent {
 		private String code;
 		private String name;
 		
-		@OneToMany(mappedBy="Continent")
+		//@OneToMany(mappedBy="Continent")
+		@OneToMany
 		private List<Country> countries;
 
 		public Continent() {
