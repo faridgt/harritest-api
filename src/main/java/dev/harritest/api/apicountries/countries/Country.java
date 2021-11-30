@@ -2,7 +2,6 @@ package dev.harritest.api.apicountries.countries;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
@@ -42,15 +41,6 @@ public Country() {
 }
 
 
-public Country(@Size(min = 2, message = "Name should have atleast 2 characters") String code, String name,
-		String fullName, String iso3, String number) {
-	super();
-	this.code = code;
-	this.name = name;
-	this.fullName = fullName;
-	this.iso3 = iso3;
-	this.number = number;
-}
 
 
 public String getCode() {
