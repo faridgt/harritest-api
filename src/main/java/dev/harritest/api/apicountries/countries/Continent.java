@@ -25,8 +25,8 @@ public class Continent {
 		private String code;
 		private String name;
 		
-		//@OneToMany(mappedBy="Continent")
-		@OneToMany(mappedBy = "primaryKey.continent", fetch = FetchType.EAGER)
+		@OneToMany(mappedBy="continent")
+		//@OneToMany(mappedBy = "primaryKey.continent", fetch = FetchType.EAGER)
 		private List<Country> countries;
 
 		public Continent() {
