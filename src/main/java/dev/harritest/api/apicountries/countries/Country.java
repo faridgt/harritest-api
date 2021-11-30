@@ -28,10 +28,11 @@ public class Country {
 	private String number;
 	private  String continentCode;
 
+	/*
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JsonIgnore
 	private Continent continent;
-
+*/
 
 
 
