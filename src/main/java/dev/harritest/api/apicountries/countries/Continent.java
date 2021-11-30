@@ -14,7 +14,7 @@ public class Continent {
 
 		@Id
 		@GeneratedValue (strategy = GenerationType.IDENTITY)
-		private long id;
+		private int id;
 		
 
 		@Size(min=2, message="Code should have atleast 2 characters")
@@ -58,11 +58,11 @@ public class Continent {
 		}
 */		
 		
-		public long getId() {
+		public int getId() {
 			return id;
 		}
 
-		public void setId(long id) {
+		public void setId(int id) {
 			this.id = id;
 		}
 		
