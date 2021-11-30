@@ -17,7 +17,7 @@ public class Continent {
 
 		@Id
 		@GeneratedValue (strategy = GenerationType.IDENTITY)
-		private int id;
+		private Integer id;
 		
 
 		@Size(min=2, message="Code should have atleast 2 characters")
@@ -53,21 +53,23 @@ public class Continent {
 			this.name = name;
 		}
 
-/*		public List<Country> getCountries() {
+		public Integer getId() {
+			return id;
+		}
+
+		public void setId(Integer id) {
+			this.id = id;
+		}
+
+		public List<Country> getCountries() {
 			return countries;
 		}
 
 		public void setCountries(List<Country> countries) {
 			this.countries = countries;
 		}
-*/		
-		
-		public int getId() {
-			return id;
-		}
 
-		public void setId(int id) {
-			this.id = id;
-		}
+
+		
 		
 }

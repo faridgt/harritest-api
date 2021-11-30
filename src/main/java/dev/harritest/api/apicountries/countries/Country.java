@@ -17,7 +17,7 @@ public class Country {
 	
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	
 	@Size(min=2, message="Name should have atleast 2 characters")
 	private String code;
@@ -118,11 +118,11 @@ public void setContinent(Continent continent) {
 	this.continent = continent;
 }
 
-public int getId() {
+public Integer getId() {
 	return id;
 }
 
-public void setId(int id) {
+public void setId(Integer id) {
 	this.id = id;
 }
 
