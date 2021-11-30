@@ -26,7 +26,6 @@ public class Country {
 	private String fullName;
 	private String iso3;
 	private String number;
-	//private  String continentCode;
 
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JsonIgnore
