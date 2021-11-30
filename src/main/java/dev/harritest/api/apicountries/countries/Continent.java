@@ -6,6 +6,7 @@ package dev.harritest.api.apicountries.countries;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,7 +26,7 @@ public class Continent {
 		private String name;
 		
 		//@OneToMany(mappedBy="Continent")
-		@OneToMany
+		@OneToMany(mappedBy = "primaryKey.continent", fetch = FetchType.EAGER)
 		private List<Country> countries;
 
 		public Continent() {
