@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 
-@Component
+//@Component
 public class CountryDaoService {
 	static private List<Country> countries=new ArrayList<>();
 			static {
