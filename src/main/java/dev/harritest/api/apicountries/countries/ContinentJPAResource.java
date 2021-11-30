@@ -1,10 +1,18 @@
 package dev.harritest.api.apicountries.countries;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+
 
 
 @RestController
@@ -20,19 +28,25 @@ public class ContinentJPAResource {
 	public List<Continent> retrieveAllContinents() {
 		return continentRepository.findAll();
 	}
-/*
-	@GetMapping("/continents/{code}")
-	public Continent retrieveUser(@PathVariable String code) {
-		
-		Country country = service.findOne(code);
-		
-		if(country==null)
-			throw new UserNotFoundException("code-"+ code);
-		
-		
-		return country;
-	}
+
 	
-*/
+	@GetMapping("/continents/{id}")
+	public EntityModel<Continent> retrieveContinent(@PathVariable int id) {
+		Optional<Continent> continent = continentRepository.findById(id);
+
+		if (!continent.isPresent())
+			throw new UserNotFoundException("id-" + id);
+
+		EntityModel<Continent> resource = EntityModel.of(continent.get());//new EntityModel<User>(user.get());
+
+		WebMvcLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retrieveAllContinents());
+
+		resource.add(linkTo.withRel("all-continents"));
+
+
+
+		return resource;
+	}
+
 
 }
