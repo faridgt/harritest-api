@@ -16,51 +16,126 @@ heroku logs --tail -a  harri-test-api
 http post "https://harri-test-api.herokuapp.com/country" code="MA" name="testMA" fullName='test country' iso3="tfs" number="009" continentCode="what ever"
 
 ------------------------------------------
-=================================
-2021-11-29T20:39:58.000000+00:00 app[api]: Build started by user fmohammad@gmail.com
-2021-11-29T20:40:16.396878+00:00 heroku[web.1]: Restarting
-2021-11-29T20:40:16.608900+00:00 heroku[web.1]: State changed from up to starting
-2021-11-29T20:40:17.402731+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2021-11-29T20:40:17.617882+00:00 heroku[web.1]: Process exited with status 143
-2021-11-29T20:40:17.460038+00:00 app[web.1]: 2021-11-29 20:40:17.459  INFO 4 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-11-29T20:40:17.461809+00:00 app[web.1]: 2021-11-29 20:40:17.461  INFO 4 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-29T20:40:17.478771+00:00 app[web.1]: 2021-11-29 20:40:17.478  INFO 4 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-29T20:40:16.127613+00:00 app[api]: Release v22 created by user fmohammad@gmail.com
-2021-11-29T20:40:19.799739+00:00 heroku[web.1]: Starting process with command `java -Dserver.port=49562 $JAVA_OPTS -jar target/api-countries-0.0.1-SNAPSHOT.jar`
-2021-11-29T20:40:16.127613+00:00 app[api]: Deploy d961dd1b by user fmohammad@gmail.com
-2021-11-29T20:40:20.717966+00:00 app[web.1]: Create a Procfile to customize the command used to run this process: https://devcenter.heroku.com/articles/procfile
-2021-11-29T20:40:20.740832+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
-2021-11-29T20:40:20.746342+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8
-2021-11-29T20:40:22.945197+00:00 app[web.1]: 
-2021-11-29T20:40:22.945216+00:00 app[web.1]: .   ____          _            __ _ _
-2021-11-29T20:40:22.945298+00:00 app[web.1]: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-2021-11-29T20:40:22.945328+00:00 app[web.1]: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-2021-11-29T20:40:22.945357+00:00 app[web.1]: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-2021-11-29T20:40:22.945386+00:00 app[web.1]: '  |____| .__|_| |_|_| |_\__, | / / / /
-2021-11-29T20:40:22.945415+00:00 app[web.1]: =========|_|==============|___/=/_/_/_/
-2021-11-29T20:40:22.946644+00:00 app[web.1]: :: Spring Boot ::                (v2.5.7)
-2021-11-29T20:40:22.946697+00:00 app[web.1]: 
-2021-11-29T20:40:23.083352+00:00 app[web.1]: 2021-11-29 20:40:23.081  INFO 4 --- [           main] d.h.a.a.ApiCountriesApplication          : Starting ApiCountriesApplication v0.0.1-SNAPSHOT using Java 1.8.0_312-heroku on 500ad420-6acd-4ada-80a4-6115f8fef198 with PID 4 (/app/target/api-countries-0.0.1-SNAPSHOT.jar started by u45943 in /app)
-2021-11-29T20:40:23.083738+00:00 app[web.1]: 2021-11-29 20:40:23.083  INFO 4 --- [           main] d.h.a.a.ApiCountriesApplication          : No active profile set, falling back to default profiles: default
-2021-11-29T20:40:26.172257+00:00 app[web.1]: 2021-11-29 20:40:26.172  INFO 4 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-11-29T20:40:26.189333+00:00 app[web.1]: 2021-11-29 20:40:26.189  INFO 4 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
-2021-11-29T20:40:23.000000+00:00 app[api]: Build succeeded
-2021-11-29T20:40:27.969666+00:00 app[web.1]: 2021-11-29 20:40:27.969  INFO 4 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 49562 (http)
-2021-11-29T20:40:27.981722+00:00 app[web.1]: 2021-11-29 20:40:27.981  INFO 4 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-29T20:40:27.981887+00:00 app[web.1]: 2021-11-29 20:40:27.981  INFO 4 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2021-11-29T20:40:28.031768+00:00 app[web.1]: 2021-11-29 20:40:28.031  INFO 4 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-29T20:40:28.031900+00:00 app[web.1]: 2021-11-29 20:40:28.031  INFO 4 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4892 ms
-2021-11-29T20:40:28.103702+00:00 app[web.1]: 2021-11-29 20:40:28.102  INFO 4 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-29T20:40:29.117272+00:00 app[web.1]: 2021-11-29 20:40:29.117  INFO 4 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-29T20:40:29.214221+00:00 app[web.1]: 2021-11-29 20:40:29.213  INFO 4 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-29T20:40:29.288990+00:00 app[web.1]: 2021-11-29 20:40:29.288  INFO 4 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-11-29T20:40:29.986411+00:00 app[web.1]: 2021-11-29 20:40:29.986  INFO 4 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-11-29T20:40:30.146474+00:00 app[web.1]: 2021-11-29 20:40:30.146  INFO 4 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2021-11-29T20:40:31.371733+00:00 app[web.1]: 2021-11-29 20:40:31.371  INFO 4 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-29T20:40:31.381295+00:00 app[web.1]: 2021-11-29 20:40:31.381  INFO 4 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-29T20:40:31.848944+00:00 app[web.1]: 2021-11-29 20:40:31.848  WARN 4 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-29T20:40:32.245693+00:00 app[web.1]: 2021-11-29 20:40:32.245  INFO 4 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49562 (http) with context path ''
-2021-11-29T20:40:32.257628+00:00 app[web.1]: 2021-11-29 20:40:32.257  INFO 4 --- [           main] d.h.a.a.ApiCountriesApplication          : Started ApiCountriesApplication in 10.948 seconds (JVM running for 11.511)
-2021-11-29T20:40:32.597081+00:00 heroku[web.1]: State changed from starting to up
 
 
+2021-11-30T06:41:35.879278+00:00 heroku[router]: at=info method=GET path="/continents/" host=harri-test-api.herokuapp.com request_id=3b06467f-bfa0-4073-ae4f-91ab8112ea24 fwd="188.215.101.229" dyno=web.1 connect=4ms service=1127ms status=500 bytes=445 protocol=http
+2021-11-30T06:41:37.168530+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=harri-test-api.herokuapp.com request_id=4073a153-0f6b-4e0d-af6a-a1df9ae21712 fwd="188.215.101.229" dyno=web.1 connect=0ms service=114ms status=404 bytes=333 protocol=http
+2021-11-30T06:41:47.203120+00:00 app[web.1]: Hibernate: select continent0_.id as id1_0_, continent0_.code as code2_0_, continent0_.name as name3_0_ from continent continent0_
+2021-11-30T06:41:47.204876+00:00 app[web.1]: 2021-11-30 06:41:47.204  WARN 4 --- [io-21382-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
+2021-11-30T06:41:47.204921+00:00 app[web.1]: 2021-11-30 06:41:47.204 ERROR 4 --- [io-21382-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "continent" does not exist
+2021-11-30T06:41:47.204922+00:00 app[web.1]: Position: 98
+2021-11-30T06:41:47.208106+00:00 app[web.1]: 2021-11-30 06:41:47.207 ERROR 4 --- [io-21382-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause
+2021-11-30T06:41:47.208107+00:00 app[web.1]: 
+2021-11-30T06:41:47.208108+00:00 app[web.1]: org.postgresql.util.PSQLException: ERROR: relation "continent" does not exist
+2021-11-30T06:41:47.208109+00:00 app[web.1]: Position: 98
+2021-11-30T06:41:47.208109+00:00 app[web.1]: at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565) ~[postgresql-42.2.24.jar!/:42.2.24]
+2021-11-30T06:41:47.208110+00:00 app[web.1]: at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297) ~[postgresql-42.2.24.jar!/:42.2.24]
+2021-11-30T06:41:47.208110+00:00 app[web.1]: at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.24.jar!/:42.2.24]
+2021-11-30T06:41:47.208110+00:00 app[web.1]: at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.24.jar!/:42.2.24]
+2021-11-30T06:41:47.208111+00:00 app[web.1]: at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.24.jar!/:42.2.24]
+2021-11-30T06:41:47.208111+00:00 app[web.1]: at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164) ~[postgresql-42.2.24.jar!/:42.2.24]
+2021-11-30T06:41:47.208111+00:00 app[web.1]: at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114) ~[postgresql-42.2.24.jar!/:42.2.24]
+2021-11-30T06:41:47.208111+00:00 app[web.1]: at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-4.0.3.jar!/:na]
+2021-11-30T06:41:47.208112+00:00 app[web.1]: at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar!/:na]
+2021-11-30T06:41:47.208112+00:00 app[web.1]: at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208112+00:00 app[web.1]: at org.hibernate.loader.Loader.getResultSet(Loader.java:2297) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208113+00:00 app[web.1]: at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2050) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208113+00:00 app[web.1]: at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2012) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208113+00:00 app[web.1]: at org.hibernate.loader.Loader.doQuery(Loader.java:948) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208113+00:00 app[web.1]: at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208113+00:00 app[web.1]: at org.hibernate.loader.Loader.doList(Loader.java:2843) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208113+00:00 app[web.1]: at org.hibernate.loader.Loader.doList(Loader.java:2825) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208114+00:00 app[web.1]: at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2657) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208114+00:00 app[web.1]: at org.hibernate.loader.Loader.list(Loader.java:2652) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208114+00:00 app[web.1]: at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208114+00:00 app[web.1]: at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208114+00:00 app[web.1]: at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208114+00:00 app[web.1]: at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208115+00:00 app[web.1]: at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1636) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208115+00:00 app[web.1]: at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1604) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208115+00:00 app[web.1]: at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208115+00:00 app[web.1]: at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+2021-11-30T06:41:47.208116+00:00 app[web.1]: at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:396) ~[spring-data-jpa-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208120+00:00 app[web.1]: at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:81) ~[spring-data-jpa-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208120+00:00 app[web.1]: at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208120+00:00 app[web.1]: at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208120+00:00 app[web.1]: at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208121+00:00 app[web.1]: at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208123+00:00 app[web.1]: at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208124+00:00 app[web.1]: at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208124+00:00 app[web.1]: at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208124+00:00 app[web.1]: at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208124+00:00 app[web.1]: at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208124+00:00 app[web.1]: at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208125+00:00 app[web.1]: at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208125+00:00 app[web.1]: at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208125+00:00 app[web.1]: at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208125+00:00 app[web.1]: at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208125+00:00 app[web.1]: at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208126+00:00 app[web.1]: at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208126+00:00 app[web.1]: at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208126+00:00 app[web.1]: at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208126+00:00 app[web.1]: at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208126+00:00 app[web.1]: at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208127+00:00 app[web.1]: at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208127+00:00 app[web.1]: at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208127+00:00 app[web.1]: at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.7.jar!/:2.5.7]
+2021-11-30T06:41:47.208128+00:00 app[web.1]: at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208128+00:00 app[web.1]: at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208130+00:00 app[web.1]: at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208131+00:00 app[web.1]: at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208131+00:00 app[web.1]: at com.sun.proxy.$Proxy83.findAll(Unknown Source) ~[na:na]
+2021-11-30T06:41:47.208131+00:00 app[web.1]: at dev.harritest.api.apicountries.countries.ContinentJPAResource.retrieveAllContinents(ContinentJPAResource.java:21) ~[classes!/:0.0.1-SNAPSHOT]
+2021-11-30T06:41:47.208132+00:00 app[web.1]: at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208132+00:00 app[web.1]: at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208132+00:00 app[web.1]: at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208132+00:00 app[web.1]: at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208132+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208133+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208133+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208133+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208133+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208133+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208134+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208134+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208134+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208134+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208134+00:00 app[web.1]: at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208134+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208134+00:00 app[web.1]: at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208135+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208135+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208135+00:00 app[web.1]: at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208135+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208136+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208136+00:00 app[web.1]: at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208136+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208136+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208136+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208137+00:00 app[web.1]: at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208139+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208139+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208139+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208139+00:00 app[web.1]: at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208140+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar!/:5.3.13]
+2021-11-30T06:41:47.208140+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208140+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208140+00:00 app[web.1]: at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208140+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208140+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208141+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208141+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208141+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208141+00:00 app[web.1]: at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:769) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208141+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208141+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208142+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208142+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208142+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208142+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208142+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208145+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208145+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.55.jar!/:na]
+2021-11-30T06:41:47.208145+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_312-heroku]
+2021-11-30T06:41:47.208146+00:00 app[web.1]: 
+2021-11-30T06:41:47.212346+00:00 heroku[router]: at=info method=GET path="/continents" host=harri-test-api.herokuapp.com request_id=d08a5931-9419-4ace-869f-3bcbea3b53b5 fwd="188.215.101.229" dyno=web.1 connect=0ms service=12ms status=500 bytes=445 protocol=http
