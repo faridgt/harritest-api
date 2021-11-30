@@ -16,7 +16,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 public class CountryResource {
-
+/*
 	@Autowired
 	private CountryDaoService service;
 
@@ -50,6 +50,6 @@ public class CountryResource {
 		return ResponseEntity.created(location).build();
 		
 	}
-
+*/
 
 }

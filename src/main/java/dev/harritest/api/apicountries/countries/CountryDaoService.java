@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 //@Component
 public class CountryDaoService {
+/*
 	static private List<Country> countries=new ArrayList<>();
 			static {
 				countries.add(new Country("AF", "AS", "Afghanistan", "AFG", "004", "Islamic Republic of Afghanistan"));
@@ -39,6 +40,6 @@ public class CountryDaoService {
 				return null;
 			}
 
-
+*/
 
 }
