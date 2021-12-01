@@ -5,7 +5,7 @@ package dev.harritest.api.apicountries.countries;
 
 import java.util.List;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -27,7 +27,7 @@ public class Continent {
 		private String name;
 		
 		
-		@OneToMany(mappedBy="continent")
+		@OneToMany(mappedBy="continent" , cascade = CascadeType.ALL)
 		private List<Country> countries;
 
 		public Continent() {
@@ -73,6 +73,5 @@ public class Continent {
 		}
 
 
-		
 		
 }

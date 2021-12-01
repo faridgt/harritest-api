@@ -116,13 +116,10 @@ public void setContinent(Continent continent) {
 	this.continent = continent;
 }
 
-//public Integer getId() {
-//	return id;
-//}
-//
-//public void setId(Integer id) {
-//	this.id = id;
-//}
-
+public String getCountryContinent() {
+	if(continent!=null)
+     return continent.getCode();
+	return "";
+}		
 
 }
