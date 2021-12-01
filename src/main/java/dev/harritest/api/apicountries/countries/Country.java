@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -27,6 +28,7 @@ public class Country {
 	private String iso3;
 	private String number;
 
+	@JsonBackReference
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JsonIgnore
 	private Continent continent;
