@@ -30,6 +30,7 @@ public class Country {
 
 	
 	@ManyToOne(fetch=FetchType.LAZY)
+	@JsonIgnore
 	private Continent continent;
 
 
