@@ -28,9 +28,8 @@ public class Country {
 	private String iso3;
 	private String number;
 
-	@JsonBackReference
+	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JsonIgnore
 	private Continent continent;
 
 
