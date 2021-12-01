@@ -29,3 +29,8 @@ alter table  continent alter column  id set  DEFAULT nextval('continent');
 
 ---------------------------------
 heroku pg:psql -a harri-test-api < ss.sql 
+
+
+
+swagger url
+http://harri-test-api.herokuapp.com/v2/api-docs
