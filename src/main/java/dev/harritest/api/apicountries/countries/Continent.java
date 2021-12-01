@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Continent {
 
@@ -23,6 +25,7 @@ public class Continent {
 		private String code;
 		private String name;
 		
+		@JsonBackReference
 		@OneToMany(mappedBy="continent")
 		//@OneToMany(mappedBy = "primaryKey.continent", fetch = FetchType.EAGER)
 		private List<Country> countries;
